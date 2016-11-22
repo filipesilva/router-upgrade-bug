@@ -21,10 +21,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes, { initialNavigation: false }) ],
+  imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '!' },
+    { provide: APP_BASE_HREF, useValue: '/!' },
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: UrlHandlingStrategy, useClass: Ng1Ng2UrlHandlingStrategy }
   ]
